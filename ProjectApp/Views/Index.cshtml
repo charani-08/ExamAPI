@@ -9,6 +9,47 @@
     <input type="text" id="ProjectIsdone" />
     <input type="submit" value="Add" />
 </form>
+<div id="editForm">
+    <h3>Edit</h3>
+
+    <form action="javascript:void(0); " onsubmit="UpdateItem()">
+        <input type="hidden" id="editProductId" />
+        <input type="text" id="editdesc" />
+        <input type="text" id="editIsdone" />
+
+        <input type="submit" value=" Update" />
+    </form>
+</div>
+
+<div id="deleteForm">
+    <h3>Delete</h3>
+
+    <form action="javascript:void(0); " onsubmit=" DeleteItem()">
+        <input type="text" id="deleteProductId" />
+        <input type="text" id="deletedesc" />
+        <input type="text" id="deleteIsdone" />
+
+        <input type="submit" value=" Delete" />
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Desc</th>
+            <th>Isdone</th>
+            
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="productlist"></tbody>
+</table>
+
+
 
 <script src="~/js/site.js" asp-append-version="true"></script>
 
