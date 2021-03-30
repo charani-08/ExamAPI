@@ -82,7 +82,7 @@ function displayEditForm(id) {
 
     document.getElementById('editProductId').value = item.productId;
     document.getElementById('editdesc').value = item.description;
-    document.getElementById('editIsdone').value = item.isdone;
+    document.getElementById('editIsdone').value = item.isDone;
     
 }
 function deleteItem(id) {
@@ -90,13 +90,13 @@ function deleteItem(id) {
 
     document.getElementById('deleteProductId').value = item.productId;
     document.getElementById('deletedesc').value = item.description;
-    document.getElementById('deleteIsdone').value = item.isdone;
+    document.getElementById('deleteIsdone').value = item.isDone;
    
 
 }
 function DeleteItem() {
     debugger;
-    const productId = document.getElementById('deleteProductlId').value;
+    const productId = document.getElementById('deleteProductId').value;
     const equipment = {
         description: document.getElementById('deletedesc').value,
         IsDone: document.getElementById('deleteIsdone').value,
@@ -134,13 +134,13 @@ function _displayproductList(data) {
 
     data.forEach(item => {
         let lableforId = document.createElement('label');
-        lableforId.innerHTML = item.producttId;
+        lableforId.innerHTML = item.productId;
 
         let lablefordesc = document.createElement('label');
         lablefordesc.innerHTML = item.description;
 
         let lableforisdone= document.createElement('label');
-        lableforisdone.innerHTML = item.isdone;
+        lableforisdone.innerHTML = item.isDone;
 
         
 
