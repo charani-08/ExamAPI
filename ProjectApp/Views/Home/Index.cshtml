@@ -1,8 +1,62 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
+<form action="javascript:void(0);" method="POST" onsubmit="addproject()">
+    
+    <input type="text" id="ProjectDesc" />
+    <input type="text" id="ProjectIsdone" />
+    <input type="submit" value="Add" />
+</form>
+<div id="editForm">
+    <h3>Edit</h3>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form action="javascript:void(0); " onsubmit="UpdateItem()">
+        <input type="hidden" id="editProductId" />
+        <input type="text" id="editdesc" />
+        <input type="text" id="editIsdone" />
+
+        <input type="submit" value=" Update" />
+    </form>
 </div>
+
+<div id="deleteForm">
+    <h3>Delete</h3>
+
+    <form action="javascript:void(0); " onsubmit=" DeleteItem()">
+        <input type="text" id="deleteProductId" />
+        <input type="text" id="deletedesc" />
+        <input type="text" id="deleteIsdone" />
+
+        <input type="submit" value=" Delete" />
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Desc</th>
+            <th>Isdone</th>
+            
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="productlist"></tbody>
+</table>
+
+
+
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script type="text/javascript">
+
+    GetProjects();
+
+
+</script>
+

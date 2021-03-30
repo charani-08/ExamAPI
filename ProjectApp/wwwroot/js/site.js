@@ -55,7 +55,7 @@ function UpdateItem() {
     const ProductId = document.getElementById('editProductId').value;
     const product = {
        description: document.getElementById('editdesc').value,
-        IsDone: parseBool(document.getElementById('editIsDone').value),
+        IsDone: parseBool(document.getElementById('editIsdone').value),
         
     };
 
@@ -80,9 +80,9 @@ function UpdateItem() {
 function displayEditForm(id) {
     const item = productlist.find(item => item.productId == id);
 
-    document.getElementById('editproductId').value = item.productId;
+    document.getElementById('editProductId').value = item.productId;
     document.getElementById('editdesc').value = item.description;
-    document.getElementById('editIsDone').value = item.isdone;
+    document.getElementById('editIsdone').value = item.isdone;
     
 }
 function deleteItem(id) {
@@ -90,7 +90,7 @@ function deleteItem(id) {
 
     document.getElementById('deleteProductId').value = item.productId;
     document.getElementById('deletedesc').value = item.description;
-    document.getElementById('deleteIsDone').value = item.isdone;
+    document.getElementById('deleteIsdone').value = item.isdone;
    
 
 }
@@ -99,7 +99,7 @@ function DeleteItem() {
     const productId = document.getElementById('deleteProductlId').value;
     const equipment = {
         description: document.getElementById('deletedesc').value,
-        IsDone: document.getElementById('deleteIsDone').value,
+        IsDone: document.getElementById('deleteIsdone').value,
         
     };
 
