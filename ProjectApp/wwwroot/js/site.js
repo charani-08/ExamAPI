@@ -27,7 +27,7 @@ function addproject() {
     debugger;
     const project = {
        description: document.getElementById('ProjectDesc').value,
-        Isdone: (document.getElementById('ProjectIsDone').value),
+        IsDone: parseBool(document.getElementById('ProjectIsdone').value),
         
     };
     
