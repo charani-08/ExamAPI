@@ -55,7 +55,7 @@ function UpdateItem() {
     const ProductId = document.getElementById('editProductId').value;
     const product = {
        description: document.getElementById('editdesc').value,
-        IsDone: parseBool(document.getElementById('editIsdone').value),
+        IsDone:parseBool(document.getElementById('editIsdone').value),
         
     };
 
@@ -97,7 +97,7 @@ function deleteItem(id) {
 function DeleteItem() {
     debugger;
     const productId = document.getElementById('deleteProductId').value;
-    const equipment = {
+    const product = {
         description: document.getElementById('deletedesc').value,
         IsDone: document.getElementById('deleteIsdone').value,
         
