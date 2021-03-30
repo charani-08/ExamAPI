@@ -3,19 +3,20 @@
 *@
 @{
 }
+<h2>Add</h2>
 <form action="javascript:void(0);" method="POST" onsubmit="addproject()">
     
-    <input type="text" id="ProjectDesc" />
-    <input type="text" id="ProjectIsdone" />
+    <input type="text" id="ProjectDesc" placeholder="description" />
+    <input type="text" id="ProjectIsdone" placeholder="Isdone"/>
     <input type="submit" value="Add" />
 </form>
 <div id="editForm">
     <h3>Edit</h3>
 
     <form action="javascript:void(0); " onsubmit="UpdateItem()">
-        <input type="hidden" id="editProductId" />
-        <input type="text" id="editdesc" />
-        <input type="text" id="editIsdone" />
+        <input type="hidden" id="editProductId" placeholder="id"/>
+        <input type="text" id="editdesc" placeholder="description"/>
+        <input type="text" id="editIsdone" placeholder="Isdone"/>
 
         <input type="submit" value=" Update" />
     </form>
@@ -25,9 +26,9 @@
     <h3>Delete</h3>
 
     <form action="javascript:void(0); " onsubmit=" DeleteItem()">
-        <input type="text" id="deleteProductId" />
-        <input type="text" id="deletedesc" />
-        <input type="text" id="deleteIsdone" />
+        <input type="text" id="deleteProductId" placeholder="id"/>
+        <input type="text" id="deletedesc" placeholder="description"/>
+        <input type="text" id="deleteIsdone" placeholder="Isdone"/>
 
         <input type="submit" value=" Delete" />
     </form>
